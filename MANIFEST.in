@@ -1,0 +1,19 @@
+include README.md
+include LICENSE
+include CHANGELOG.md
+include CONTRIBUTING.md
+include SECURITY.md
+include API_LIMITATIONS.md
+include BOX_API_SETUP.md
+include COMPLIANCE_PLAN.md
+include requirements.txt
+include requirements-dev.txt
+recursive-include config *.yaml *.yml
+recursive-include src *.py
+recursive-include tests *.py
+global-exclude *.pyc
+global-exclude __pycache__
+global-exclude *.local.md
+global-exclude *_config.json
+global-exclude *.pem
+global-exclude *.key

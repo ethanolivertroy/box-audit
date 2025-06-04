@@ -1,0 +1,186 @@
+# NIST 800-53 Controls Mapped to Box Checks
+# FedRAMP Moderate Baseline Focus
+
+access_control:
+  AC-2:
+    title: "Account Management"
+    description: "Manage information system accounts"
+    box_checks:
+      - inactive_user_check
+      - orphaned_accounts_check
+      - privileged_roles_review
+    cia_impact:
+      confidentiality: high
+      integrity: medium
+      availability: low
+
+  AC-3:
+    title: "Access Enforcement"
+    description: "Enforce approved authorizations"
+    box_checks:
+      - folder_permissions_check
+      - external_collaboration_check
+      - group_membership_validation
+    cia_impact:
+      confidentiality: high
+      integrity: high
+      availability: low
+
+  AC-6:
+    title: "Least Privilege"
+    description: "Employ least privilege principle"
+    box_checks:
+      - admin_role_minimization
+      - co_admin_review
+      - excessive_permissions_check
+    cia_impact:
+      confidentiality: high
+      integrity: medium
+      availability: low
+
+audit_accountability:
+  AU-2:
+    title: "Event Logging"
+    description: "Audit events defined by organization"
+    box_checks:
+      - audit_log_enabled
+      - event_types_coverage
+      - admin_events_tracking
+    cia_impact:
+      confidentiality: medium
+      integrity: high
+      availability: low
+
+  AU-3:
+    title: "Content of Audit Records"
+    description: "Audit records contain required information"
+    box_checks:
+      - log_detail_sufficiency
+      - timestamp_accuracy
+      - user_identification
+    cia_impact:
+      confidentiality: low
+      integrity: high
+      availability: low
+
+  AU-4:
+    title: "Audit Storage Capacity"
+    description: "Allocate audit record storage capacity"
+    box_checks:
+      - retention_policy_check
+      - storage_allocation_review
+    cia_impact:
+      confidentiality: low
+      integrity: medium
+      availability: medium
+
+identification_authentication:
+  IA-2:
+    title: "Multi-Factor Authentication"
+    description: "Implement MFA for network access"
+    box_checks:
+      - mfa_enforcement_check
+      - mfa_bypass_review
+      - sso_mfa_integration
+    cia_impact:
+      confidentiality: high
+      integrity: high
+      availability: medium
+
+  IA-5:
+    title: "Authenticator Management"
+    description: "Manage information system authenticators"
+    box_checks:
+      - password_policy_strength
+      - password_expiration_check
+      - password_history_check
+    cia_impact:
+      confidentiality: high
+      integrity: high
+      availability: low
+
+  IA-8:
+    title: "Identification and Authentication"
+    description: "Identify and authenticate non-organizational users"
+    box_checks:
+      - external_user_validation
+      - guest_account_review
+      - third_party_app_auth
+    cia_impact:
+      confidentiality: high
+      integrity: medium
+      availability: low
+
+system_communications_protection:
+  SC-8:
+    title: "Transmission Confidentiality"
+    description: "Protect transmitted information"
+    box_checks:
+      - tls_version_check
+      - encryption_in_transit
+      - api_encryption_validation
+    cia_impact:
+      confidentiality: high
+      integrity: high
+      availability: low
+
+  SC-13:
+    title: "Cryptographic Protection"
+    description: "Implement cryptographic protection"
+    box_checks:
+      - encryption_at_rest_check
+      - key_management_review
+      - crypto_algorithm_strength
+    cia_impact:
+      confidentiality: high
+      integrity: high
+      availability: low
+
+  SC-28:
+    title: "Protection of Information at Rest"
+    description: "Protect information at rest"
+    box_checks:
+      - file_encryption_status
+      - folder_encryption_policies
+      - mobile_device_encryption
+    cia_impact:
+      confidentiality: high
+      integrity: medium
+      availability: low
+
+configuration_management:
+  CM-2:
+    title: "Baseline Configuration"
+    description: "Maintain baseline configurations"
+    box_checks:
+      - security_settings_baseline
+      - enterprise_settings_review
+      - default_sharing_settings
+    cia_impact:
+      confidentiality: medium
+      integrity: high
+      availability: medium
+
+  CM-6:
+    title: "Configuration Settings"
+    description: "Establish mandatory configuration settings"
+    box_checks:
+      - security_policy_enforcement
+      - compliance_settings_check
+      - integration_restrictions
+    cia_impact:
+      confidentiality: medium
+      integrity: high
+      availability: low
+
+  CM-8:
+    title: "Information System Component Inventory"
+    description: "Maintain inventory of system components"
+    box_checks:
+      - user_inventory_accuracy
+      - device_trust_inventory
+      - oauth_app_inventory
+    cia_impact:
+      confidentiality: low
+      integrity: medium
+      availability: medium
